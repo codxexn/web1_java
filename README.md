@@ -1175,13 +1175,42 @@ abstract class 클래스명 {
 
 ## 📝 Day15
 > ### Optional
+- jdk 8버전부터
+- Lambda 활용
+- NullPointException(NPE) 발생 최대한 방지 가능
+- Null 일때, Null 아닐 때를 구분해서 코드 짜는 것 도와줌
+- Null 떴을 때 처리할 수 있어야 하고, Null이 뜨면 안되게도 설계 가능해야 한다.
+- 람다 안에서는 지역변수를 바꿀 수 없다.
+	- of: Null 일리 없다.
+	- ofNullalbe: Null일 수도 있다.
+- Optional 객체는 Lamdba 이다. -> null이 아닐 때만 실행된다.
+	- ifPresent() -> Null 일 때만 해 -> boolean 타입임
+	- ifPresentOrElse() -> () -> Null 일 때 할 것, () -> Null이 아닐 때 할 것
 
+<br>
 
+**📌 { } 초기화 블럭: 객체 만들때 마다 처음에 실행되는 것**  
+**📌 static { } 시작하자마자 실행하는 것**  
+**📌 반드시 리턴 타입에서만 Optional을 사용하고, 단일 객체만 감싸준다.**  
+```java
+예) Optional<List<User>>
+// List는 Null 일 수가 없다.	
+```
 
+<br>
 
+> ### 프로그램
+- 실행되지 않은 상태
+  
+<br>
 
+> ### 프로세스: Linker
+- (더블클릭 혹은 엔터로)실행된 프로그램. (실행시킨 프로그램)
 
+<br>
 
+> ### 쓰레드: thread
+- 비동기: 무한스크롤로 정보를 계속 불러옴
 
 
 
